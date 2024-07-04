@@ -1,0 +1,16 @@
+﻿@page "/"
+@using MyTrainingV1311Demo.Core.Dependency
+@inherits MyTrainingV1311DemoMainLayoutPageComponentBase
+
+<div class="card">
+    <div class="card-body">
+        INDEX
+    </div>
+</div>
+
+@code {
+    protected override void OnInitialized()
+    {
+        DependencyResolver.Resolve<INavigationService>().NavigateTo(NavigationUrlConsts.User);
+    }
+}
